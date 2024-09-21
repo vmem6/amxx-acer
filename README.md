@@ -38,26 +38,6 @@ _Note: the min. and max. values are not currently enforced, and are only provide
     <td>Description</td>
   </tr>
   <tr>
-    <td><code>acer_prefix</code></td>
-    <td align="center">string</td>
-    <td align="center"><code>"[ACER] ^1"</code></td>
-    <td align="center">-</td>
-    <td align="center">-</td>
-    <td>Prefix printed before every chat message issued by the plugin.</td>
-  </tr>
-  <tr>
-    <td><code>acer_show_restart_msg</code></td>
-    <td align="center">boolean</td>
-    <td align="center">0</td>
-    <td align="center">0</td>
-    <td align="center">1</td>
-    <td>
-      Show "Game will restart in N seconds" messages.<br>
-      <code>0</code> - disabled;<br>
-      <code>1</code> - enabled.
-    </td>
-  </tr>
-  <tr>
     <td><code>acer_mix_min_players</code></td>
     <td align="center">integer</td>
     <td align="center">2</td>
@@ -128,6 +108,26 @@ _Note: the min. and max. values are not currently enforced, and are only provide
     <td align="center">0</td>
     <td align="center">-</td>
     <td>Number of seconds that must elapse before a repeat vote can be started.</td>
+  </tr>
+  <tr>
+    <td><code>acer_show_restart_msg</code></td>
+    <td align="center">boolean</td>
+    <td align="center">0</td>
+    <td align="center">0</td>
+    <td align="center">1</td>
+    <td>
+      Show "Game will restart in N seconds" messages.<br>
+      <code>0</code> - disabled;<br>
+      <code>1</code> - enabled.
+    </td>
+  </tr>
+  <tr>
+    <td><code>acer_prefix</code></td>
+    <td align="center">string</td>
+    <td align="center"><code>"[ACER] ^1"</code></td>
+    <td align="center">-</td>
+    <td align="center">-</td>
+    <td>Prefix printed before every chat message issued by the plugin.</td>
   </tr>
 </table>
 </details>
