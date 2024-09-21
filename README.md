@@ -8,7 +8,7 @@ Currently, there are two features: slash block, and a simple mix/duel system.
 
 Slash block is always active and forces a would-be slash into a stab.
 
-The mix/duel system allows players to start a vote on whether they'd like to initiate a team-versus-team duel for a set amount of rounds (`acer_mix_round_num`), assuming that certain conditions are met (player ratio [`acer_mix_min_pcount_ratio`] and minimum number of players [`acer_mix_min_players`]).
+The mix/duel system allows players to start a vote (through `/votemix`) on whether they'd like to initiate a team-versus-team duel for a set amount of rounds (`acer_mix_round_num`), assuming that certain conditions are met (player ratio [`acer_mix_min_pcount_ratio`] and minimum number of players [`acer_mix_min_players`]).
 
 ## Requirements
 
