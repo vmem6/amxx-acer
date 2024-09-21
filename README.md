@@ -131,3 +131,8 @@ _Note: the min. and max. values are not currently enforced, and are only provide
   </tr>
 </table>
 </details>
+
+## Modules
+
+- FakeMeta
+- Cstrike
