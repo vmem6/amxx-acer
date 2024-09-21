@@ -1,0 +1,21 @@
+[en]
+CHAT_MIX_TOO_RECENT = A mix was recently held. Please wait ^4%d ^1more second/-s.
+CHAT_MIX_TEAM_ALL_LEFT = All players from %ss left. Ending mix.
+CHAT_MIX_PLAYER_DIFF_TOO_LARGE = Player count diff. has become too large (>%d). Ending mix.
+CHAT_MIX_SCORE = Round: %d/%d [T: %d | CT: %d]
+CHAT_MIX_DRAW = Mix ended... Draw! [T: %d | CT: %d]
+CHAT_MIX_WON = The ^4%ss ^1won the mix by ^4%d ^1points!
+CHAT_MIX_VOTE_MIX_IN_PROGRESS = A mix is already in progress.
+CHAT_MIX_VOTE_IN_PROGRESS = A vote for mix is already in progress.
+CHAT_MIX_VOTE_TOO_RECENT = A vote was recently held. Please wait ^4%d ^1more second/-s.
+CHAT_MIX_VOTE_NOT_ENOUGH_PLAYERS = Not enough players. [^3%d^1/%d]
+CHAT_MIX_VOTE_PLAYER_DIFF_TOO_LARGE = Player count diff. too large. [^3%d^1/%d]
+CHAT_MIX_VOTE_X_STARTED = ^3%s ^1started a vote for a ^4%d ^1round mix.
+CHAT_MIX_VOTE_ALL_VOTED = All players voted -- ending preliminarily.
+CHAT_MIX_VOTE_INSUFFICIENT_TURNOUT = Vote failed: not enough players voted. [^3%d^1/%d]
+CHAT_MIX_VOTE_FAILED = Vote failed: got ^3%d^1/%d votes in favor, ^3%d^1 against.
+CHAT_MIX_VOTE_SUCCEEDED = Vote succeeded! Starting ^4%d ^1round mix.
+MENU_MIX_VOTE_TITLE = \rDo you wish to start a mix?
+MENU_TIME_LEFT = Time left: \y%d s
+MENU_YES = Yes
+MENU_NO = No
