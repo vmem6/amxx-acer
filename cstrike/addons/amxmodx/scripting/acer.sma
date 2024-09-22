@@ -6,7 +6,7 @@
 #include <cstrike>
 
 #define PLUGIN  "Acer"
-#define VERSION "1.0"
+#define VERSION "1.0.1"
 #define AUTHOR  "vmem6"
 
 #define DICTIONARY_FILE "acer.txt"
