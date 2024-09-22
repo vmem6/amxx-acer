@@ -46,6 +46,7 @@ new g_mix_repeat_delay;
 
 new g_bs_mix_voted;
 
+new bool:g_mix_starting;
 new bool:g_mix_started;
 new g_mix_last_time;
 
@@ -128,7 +129,7 @@ public client_disconnected(pid, bool:drop, message[], maxlen)
     return;
   }
 
-  if (min(tnum, ctnum)/max(tnum, ctnum) < g_mix_min_pcount_ratio_live) {
+  if (1.0*min(tnum, ctnum)/max(tnum, ctnum) < g_mix_min_pcount_ratio_live) {
     print(0, print_team_red, 3,
       "%L", LANG_PLAYER, "CHAT_MIX_PLAYER_DIFF_TOO_LARGE",
       max(tnum, ctnum) - floatround(g_mix_min_pcount_ratio_live*max(tnum, ctnum), floatround_ceil));
@@ -173,7 +174,7 @@ public clcmd_votemix(pid)
     return PLUGIN_HANDLED;
   }
 
-  if (min(tnum, ctnum)/max(tnum, ctnum) < g_mix_min_pcount_ratio) {
+  if (1.0*min(tnum, ctnum)/max(tnum, ctnum) < g_mix_min_pcount_ratio) {
     print(pid, print_team_red, 3,
       "%L", LANG_PLAYER, "CHAT_MIX_VOTE_PLAYER_DIFF_TOO_LARGE",
       abs(tnum - ctnum), floatround(g_mix_min_pcount_ratio*max(tnum, ctnum), floatround_ceil));
@@ -300,7 +301,7 @@ close_mix_vote()
 start_mix()
 {
   g_mix_t_score = g_mix_ct_score = g_mix_round = 0;
-  g_mix_started = true;
+  g_mix_starting = true;
   server_cmd("sv_restart 3");
 }
 
@@ -352,6 +353,11 @@ public msg_textmsg(msg_id, msg_dest, msg_ent)
 
 public event_new_round()
 {
+  if (g_mix_starting) {
+    g_mix_starting = false;
+    g_mix_started = true;
+  }
+
   if (!g_mix_started)
     return;
 
@@ -364,6 +370,10 @@ public event_new_round()
 public event_sendaudio()
 {
   enum { data_audiocode = 2 };
+
+  if (!g_mix_started)
+    return;
+
   new audiocode[32 + 1];
   read_data(data_audiocode, audiocode, charsmax(audiocode));
   if (contain(audiocode, "terwin") != -1)
