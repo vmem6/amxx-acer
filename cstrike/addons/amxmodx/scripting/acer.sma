@@ -261,7 +261,7 @@ public handle_mix_vote_menu(pid, menu, item)
       get_playersnum_ex(GetPlayers_ExcludeBots | GetPlayers_MatchTeam, "CT");
 
     if (total_votes >= pnum) {
-      print(pid, pid, 4, "%L", LANG_PLAYER, "CHAT_MIX_VOTE_ALL_VOTED");
+      print(0, print_team_default, 4, "%L", LANG_PLAYER, "CHAT_MIX_VOTE_ALL_VOTED");
       close_mix_vote();
       menu_destroy(g_mix_vote_menu);
       g_mix_vote_menu = 0;
